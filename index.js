@@ -75,7 +75,7 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 function addFlavor(newFlavor, arr){
 
 arr.unshift(newFlavor)
-  console.log(newFlavor, arr)
+  console.log(arr)
 }
 addFlavor("Strawberry Sherbert", originalFlavors);
 
@@ -136,8 +136,8 @@ Your function should accept:
 For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla. 
 
 Hint: You can use .splice() for this
-
 */
+
 
 function removeFlavorByName(arr, element){
 
@@ -159,11 +159,31 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
-
-    /*code here*/
+function copy(arr){
+  let copyOriginalFlavors = arr.slice()
+  return console.log(copyOriginalFlavors)
 
 }
+ 
+copy(originalFlavors); /* For some reason, it wont return copyOriginalFlavors when i call on it through console.log!!!*/
+
+
+
+/* Second answer. But i dont like it because you have to console log it, instead of just using the function. Also, its not universal like previous answers.*/
+
+function copy(arr){
+  let copyOriginalFlavors = arr.slice()
+  return copyOriginalFlavors;
+  
+}
+ 
+let copyOriginalFlavors = copy(originalFlavors)
+
+console.log(copyOriginalFlavors);
+
+
+
+
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -180,13 +200,13 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(arr, holidayFlavor){
 
     /*code here*/
 
 }
 
-
+filterByWord(originalFlavors, "chocolate");
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
