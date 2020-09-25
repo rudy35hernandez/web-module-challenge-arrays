@@ -202,11 +202,16 @@ hint - you can use the .includes method to help you solve this */
 
 function filterByWord(arr, holidayFlavor){
 
-    /*code here*/
-
-}
-
-filterByWord(originalFlavors, "chocolate");
+    let filteredArray = [];
+    for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(holidayFlavor)){
+    filteredArray.push(arr[i])
+    }
+      }
+   return filteredArray;
+  }
+  
+  console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
